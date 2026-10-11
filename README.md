@@ -87,30 +87,6 @@ Open your browser at **http://localhost:8501**
 
 ---
 
-## Optional: Enable full AI reports with Ollama
-
-Without Ollama, the system uses structured template reports. With Ollama, reports are AI-generated.
-
-```bash
-# Install Ollama from https://ollama.com
-ollama pull mistral              # Main reasoning model (4.1GB)
-ollama pull nomic-embed-text     # Embedding model for RAG (274MB)
-```
-
-Then restart the app. The homepage shows ✓ Running when Ollama is detected.
-
----
-
-## Optional: Live IP reputation with AbuseIPDB
-
-```bash
-cp .env.example .env
-# Edit .env and add your free API key from abuseipdb.com
-```
-
-Without the key, the system uses demo reputation data for known malicious IPs.
-
----
 
 ## How the LangGraph investigation works
 
@@ -223,16 +199,4 @@ SSH password guessing at ~5 attempts/second.
 
 ---
 
-## Portfolio talking points
 
-- **Real problem, real tools** — uses the same technical stack (Isolation Forest, LangGraph, MITRE ATT&CK) as production security systems
-- **No labels required** — unsupervised anomaly detection works on any network without manual labelling
-- **Fully local** — Ollama means zero data leaves the network; critical for enterprise compliance
-- **Explainable AI** — SHAP shows exactly which features drove each alert; not a black box
-- **Multi-step agent** — LangGraph proves you can build complex, stateful AI workflows with conditional logic
-
----
-
-## Disclaimer
-
-Portfolio project. Uses synthetic network traffic data. Not affiliated with any security vendor or the MITRE Corporation. Not intended for use in production security environments without additional validation.
